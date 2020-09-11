@@ -1,0 +1,95 @@
+<view class="container">
+        <view class="swiper-tab">
+              <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">今日成绩</view>
+              <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">答题情况</view>
+              <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">成绩统计</view>
+              <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">总排行</view>
+        </view>
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight+300}}px" bindchange="bindChange">
+    
+                <swiper-item><!-- 第一个tab -->
+                      <view class="title" ><h2>{{uname}}今日成绩</h2></view>
+                        <view class="table" id="test">
+                              <view class="tr">
+                                          <view class="th">姓名</view>
+                                          <view class="th">性别</view>
+                                          <view class="th">对错</view>
+                                          <view class="th">回答答案</view>
+                                          <view class="th">题号</view>
+                                          <view class="th">测试时长</view>
+                                          <view class="thdate">测试时间</view>
+                              </view>     
+                
+                                <view class="tr"  wx:for="{{Jiaoxuejia}}" wx:for-item="items" 
+                                            style="background:{{items.true_or_false=='错' ? '#FE8086' : '#5DFEA9'}}" wx:key="{{items.topic_number}}"> 
+                                                    <view class="td" data-id="{{items.u_id}}" bindtap="yonghuId">{{items.u_name}}</view>
+                                                    <view class="td">{{items.u_gender}}</view>
+                                                    <view class="td"  bindtap="duicuotu">{{items.true_or_false}} </view>                                                 
+                                                    <view class="td">{{items.answer}}</view>
+                                                    <view class="td" >{{items.topic_number}}</view>
+                                                    <view class="td" data-id="{{items.topic_number}}" bindtap="tihao">{{items.date_time}}</view>
+                                                    <view class="tddate" bindtap="duicuo">{{items.date}}</view>
+                                </view>
+                        </view>
+                </swiper-item>
+
+    <swiper-item><!-- 第二个tab -->
+         <view class="name"><h2>{{uname}}</h2></view>
+        <view class="zongti">总题数：{{duicuozongshu}}个</view>
+        <view class="zhengque">正确个数：{{dui}}个</view>
+        <view class="zhengqueti">正确题号：<text >{{truetihao}}</text></view>
+        <view class="cuowu">错误个数：{{cuo}}个</view>
+            <view class="cuowuti">错误题号：<text>{{falsetihao}}</text></view>
+    </swiper-item>
+
+    <swiper-item>
+            <view class="name"><h2>{{uname}}成绩统计</h2></view>
+            <canvas canvas-id="columnCanvas" disable-scroll="true" class="pieCanvas" ></canvas>
+    </swiper-item>
+
+            <swiper-item>
+                <view class="title"><h2>今日答题正确排行榜</h2></view>
+                          <view class="table">
+                                      <view class="tr">
+                                                  <view class="th2">排行</view>
+                                                  <view class="th2">姓名</view>
+                                                  <view class="th2">总题</view>
+                                                  <view class="th2">正确</view>
+                                                  <view class="th2">错误</view>
+                                                  <view class="th2">分数</view>
+                                                  <view class="th2" style="border-right: 1px solid #61ACD3;">正确率</view>                     
+                                      </view>     
+
+                        <view class="tr"  wx:for="{{zhengqulv}}" wx:for-item="items" style="background:{{items.benxuesheng=='1' ? '#B0F9B0' : '#CFD5EA'}}"> 
+                                            <view class="td2">{{items.paihang}}</view>
+                                            <view class="td2">{{items.uName}}</view>
+                                             <view class="td2">{{items.zongti}}</view>
+                                            <view class="td2">{{items.trueCount}} </view>                                                 
+                                            <view class="td2">{{items.falseCount}}</view>  
+                                            <view class="td2">{{items.trueCount}} </view>   
+                                            <view class="td2"  style="border-right: 1px solid #61ACD3;">{{items.zhengquelv}}%</view>                                
+                                      </view>
+                          </view>
+      </swiper-item>
+  </swiper>
+          <!-- 固定栏 -->
+          <view class='gudin'>
+              <button class="gudin1" bindtap='xuanzhongzhuye'>
+                <image class='gudinimg' src='/static/img/zhuye.png'></image>
+              <view>主页</view>
+              </button>   
+              <button class="gudin1"  bindtap="xuanzezixun" id='gudin11'>
+                <image class='gudinimg' src='/static/img/zixun.png'></image>
+              <view>资讯</view>
+              </button>
+            <button open-type="contact" class='gudin1' id='gudin11' >
+                <image class='gudinimg' src='/static/img/zhuanjia.png'></image>
+                <view>咨询</view>
+              </button> 
+              <button class="gudin1"  bindtap="xuanzewode" id='gudin11' >
+                <image class='gudinimg' src='/static/img/wode.png'></image>
+              <view>我的</view>
+              </button> 
+          </view>  
+</view>

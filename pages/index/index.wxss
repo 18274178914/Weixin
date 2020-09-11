@@ -1,0 +1,197 @@
+
+/** 轮播图**/
+.u-wrp-bnr {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+  background: #f0f0f0;
+}
+.u-img-slide {
+  width: 100%;
+  height: 400rpx;
+}
+/** 菜单 **/
+.btnview{
+  width: 100%;
+  margin-top: 50rpx;  
+}
+.btn1{
+  width: 250rpx;
+  background-color: white;
+  color: #999999;
+  float: left;
+  font-size: 29rpx;
+
+}
+#btn11{
+  margin-top: 30rpx;
+}
+.btnImg {
+  width: 80rpx;
+  height: 80rpx;
+}
+.btn1::after {
+  border: 0; 
+}
+/** 电话  地址**/
+.phone{
+  margin-left:37rpx;
+margin-top:30rpx;
+}
+.phontext{
+  margin-left: 25rpx;
+font-size: 23rpx;
+color: #828282;
+}
+
+.phoneimg{
+  width: 65rpx;
+  height:65rpx;
+  position:relative;
+  top:25rpx;
+}
+.address{
+  margin-top:30rpx;
+   margin-left:37rpx;  
+}
+
+/** 固定栏**/
+.gudin{
+  width: 100%;
+  position: fixed;
+  bottom:0rpx;
+}
+.gudin1{
+  border-radius:0rpx;
+  float: left;
+  background-color: #FFFFFF;
+  font-size: 25rpx;
+  margin-left: 32rpx;
+
+}
+#gudin11 {
+  margin-left: 70rpx; 
+}
+.gudin1::after {
+  border: 0; 
+}
+
+.gudinimg{
+  width: 60rpx;
+height: 50rpx;
+position: relative;
+top: 20rpx;
+}
+/**登录盒子**/
+.login{
+width: 539rpx;
+height: 400rpx;
+background: #191C2C;
+position: absolute;
+top: 30%;
+left: 14%;
+}
+/**登录文本框**/
+.login input{
+width: 426rpx;
+background: #5CBDAA;
+color: white;
+padding: 10rpx;
+font-size: 27rpx;
+margin-bottom: 40rpx;
+border-radius: 7rpx;
+padding-left: 25rpx;
+margin-left: 38rpx;
+}
+/**标题**/
+.schoolcode{
+  text-align: center;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  color: #5CBDAA;
+  
+}
+/**登录按钮**/
+.loginclass{
+  width: 439rpx;
+  color: white;
+  background: #5CBDAA;
+  text-align: center;
+  padding: 10rpx;
+  margin-left: 38rpx;
+  border-radius: 10rpx;
+  font-size: 29rpx;
+  height: 53rpx;
+  line-height: 47rpx;
+  
+}
+/**提示输入信息**/
+.placeholder-input{
+color: white;
+}
+.guanbi{
+position: absolute;
+top: 0rpx;
+right: 10rpx;
+}
+.guanbi image{
+width: 35rpx;
+height: 35rpx;
+}
+
+/**远程盒子**/
+.login1{
+  width: 539rpx;
+  height: 400rpx;
+  background: #191C2C;
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  }
+  /**登录文本框**/
+.login1 input{
+  width: 426rpx;
+  background: #5CBDAA;
+  color: white;
+  padding: 10rpx;
+  font-size: 27rpx;
+  margin-bottom: 40rpx;
+  border-radius: 7rpx;
+  padding-left: 25rpx;
+  margin-left: 38rpx;
+  }
+  /**标题**/
+.schoolcode1{
+  text-align: center;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  color: #5CBDAA;
+  
+}
+/**登录按钮**/
+.login1class{
+  width: 439rpx;
+  color: white;
+  background: #5CBDAA;
+  text-align: center;
+  padding: 10rpx;
+  margin-left: 38rpx;
+  border-radius: 10rpx;
+  font-size: 29rpx;
+  height: 53rpx;
+  line-height: 47rpx;
+  
+}
+/**提示输入信息**/
+.placeholder-input{
+color: white;
+}
+.guanbi1{
+position: absolute;
+top: 0rpx;
+right: 10rpx;
+}
+.guanbi1 image{
+width: 35rpx;
+height: 35rpx;
+}

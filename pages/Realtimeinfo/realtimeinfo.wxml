@@ -1,0 +1,45 @@
+<view  class="container">
+  <image class='zixunImg' src='/static/img/zhongyizixun.png'></image>
+  <h2>机构介绍</h2>
+  
+<br>上海中易心理与感知科学研究院成立于1994年，是上</br>
+<br>海最早具备心理咨询资质的机构之一，国内首家推行儿</br>
+<br>童感知统合训练额度研究机构。</br>
+
+<br>目前已发展为集学术研究、方案设计、测评软件开发、</br>
+<br>教育培训、教具生产为一体的综合型儿童心理研究机构。</br>
+<br>进行心理学、教育学、医学、康复学等多学科相结合的</br>
+<br>幼儿教育研究与实践，致力于将大数据、云计算、穿戴</br>
+<br>设备等与幼儿教育相结合，为学生提供优质数字化教育</br>
+<br>，推进基础教育信息化的应用。</br>
+
+<br>现已成功完成了上海儿童健康大数据平台的开发与应用、</br>
+<br>儿童感知觉能力、运动能力智能教具的研发。目前公司</br>
+<br>还拥有幼儿园、感统康复与训练中心，不断将我们的研究</br>
+<br>在实践中进行检验与运用。</br>
+<h3>机构概括</h3>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">研发国内第一套心理测评工具</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">建立第一家儿童健康大数据平台</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">和教育局创办第一个教育心理机构</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">全国第一个将感统训练引入幼儿教育</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">国内第一家引入国外OTPT理疗的机构</view>
+</view>
+<view class="diyi">
+   <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">上海第一家具有心理咨询营业执的机构</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">和上海儿童医院创办第一个儿童医疗心理机构</view>
+</view>
+<view class="diyi">
+    <view class="diyiImg"><image  src='/static/img/biaoji.png'></image></view><view class="diyitext">全国第一个将感统训练引入特殊教育和小学教育</view>
+</view>
+</view>

@@ -1,0 +1,627 @@
+<!--pages/Select/select.wxml-->
+<view class='container'>
+      <!-- 搜索框 -->
+        <view class="weui-search-bar">
+                  <view class="section">
+                      <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+                          <view class="picker">
+                            {{date}}
+                          </view>
+                    </picker>
+                  </view>
+                  <view class="button" bindtap="chaxun">
+                    <button >查询</button>
+                  </view>
+        </view>
+    <view wx:if="{{hiddenName}}">  
+                <!--个人信息-->  
+                <view class="da">
+                    <text>学生信息</text>
+                </view>
+                <view class="divLine"></view>
+                <view class="xinxida">
+                      <view class="xinxi">
+                             <view class="xinxi">
+                                    <view class="school">学校</view><view class="schoolname">{{schoolname}}</view>
+                                    <view class="school">年级</view><view class="schoolname">{{gradename}}</view>
+                                    <view class="class">班级</view><view class="classname">{{classname}}</view> 
+                                    <view class="class">姓名</view><view class="classname">{{name}}</view>
+                                    <view class="class">性别</view><view class="uname">{{sex}}</view>
+                                    <view class="class">年龄</view><view class="uname">{{nianlin}}</view>
+                             </view>
+                      </view>
+                </view>
+                  <!-- 测评结果 -->
+                <view class="da1">
+                    <text>测评运动能力结果</text>
+                </view>
+                
+        <!-- 运动-->
+        <view class="table">
+                          <!--拼图 3个表格数据向下-->
+                          <view class="tr">
+                  <view class="th3">测评项目</view>
+                  <view class="th3">跳远距离</view>
+                  <view class="thdate3">测试日期</view>
+                  </view>
+                  <view class="tr">
+                  <view class="td3">{{tiaoyuan}}</view>    
+                  <view class="td3">{{jumpDistance}}</view>
+                  <view class="tddate3">{{jumpDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--拍球 4个表格数据向下-->
+                  <view class="tr">
+                  <view class="th2">测评项目</view>
+                  <view class="th2">拍球数量</view>
+                  <view class="th2">用时</view>
+                  <view class="thdate2">测试日期</view>
+                  </view>           
+                  <view class="tr">
+                  <view class="td2">{{paiqiu}}</view>
+                  <view class="td2">{{batCount}}</view>          
+                  <view class="td2">{{batTest}}</view>
+                  <view class="tddate2">{{batDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--趴地推球-->
+                  <view class="tr">
+                  <view class="th2">测评项目</view>
+                  <view class="th2">推球数量</view>
+                  <view class="th2">用时</view>
+                  <view class="thdate2">测试日期</view>
+                  </view>             
+                  <view class="tr">
+                  <view class="td2">{{padituiqiu}}</view>
+                  <view class="td2">{{pushCount}}</view>          
+                  <view class="td2">{{pushTest}}</view>
+                  <view class="tddate2">{{pushDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+
+                 <!--身高体重5个表格数据向下-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">身高</view>
+                  <view class="th ">体重</view>
+                  <view class="th">BMI</view>
+                  <view class="thdate">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td">{{shtzheight}}</view>
+                        <view class="td">{{hwHeight}}</view>
+                        <view class="td">{{hwWeight}}</view>
+                        <view class="td">{{hwBim}}</view>
+                        <view class="tddate">{{hwDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--吊环-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>          
+                  <view class="th ">左手拉力</view>
+                  <view class="th">右手拉力</view>
+                  <view class="th">测试时长</view>
+                  <view class="thdate">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td">{{diaohuan}}</view>                    
+                        <view class="td">{{rsLefPressure}}</view>
+                        <view class="td">{{rsRighPressure}}</view>
+                        <view class="td">{{rsTestTime}}</view>
+                        <view class="tddate">{{rsDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--蹦床-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">次数</view>
+                  <view class="th ">左脚平均高度</view>
+                  <view class="th">右脚平均高度</view>
+                  <view class="thdate">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td">{{bengchuang}}</view>
+                        <view class="td">{{trCount}}</view>
+                        <view class="td">{{trLAve}}</view>
+                        <view class="td">{{trRAve}}</view>
+                        <view class="tddate">{{trDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                     <!--老版脚步器-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">测试时长</view>
+                  <view class="th ">目标刺激个数</view>
+                  <view class="th">速率</view>
+                  <view class="thdate">测试日期</view>
+                  </view>     
+                  <view class="tr">
+                        <view class="td">{{onejiaobuqi}}</view>
+                        <view class="td">{{deTest}}</view>
+                        <view class="td">{{deCount}}</view>
+                        <view class="td">{{deSpeed}}</view>
+                        <view class="tddate">{{deDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                     <!--坐位体前屈-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">最好成绩</view>
+                  <view class="th ">第一次成绩</view>
+                  <view class="th">第二次成绩</view>
+                  <view class="thdate">测试日期</view>
+                  </view>               
+                  <view class="tr">
+                        <view class="td">{{tiqianqu}}</view>
+                        <view class="td">{{flBestSocre}}</view>
+                        <view class="td">{{flFirstSocre}}</view>
+                        <view class="td">{{flSecondSocre}}</view>
+                        <view class="tddate">{{flDate}}</view>
+                  </view>              
+                  <view class="block"></view>
+
+                    <!--双脚连续跳-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">成绩</view>
+                  <view class="th ">平均用时</view>
+                  <view class="th">反应时间</view>
+                  <view class="thdate">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td">{{lianxutiao}}</view>
+                        <view class="td">{{dfTotalTime}}</view>
+                        <view class="td">{{dfTotalAvgTime}}</view>
+                        <view class="td">{{dfReactionTime}}</view>
+                        <view class="tddate">{{dfDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                  <!--平衡木6个表格数据向下-->
+                  <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">测试时长</view>
+                  <view class="th1 ">左臂倾角度</view>
+                  <view class="th1">右臂倾角度</view>
+                  <view class="th1">测试时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{pinghengmu}}</view>
+                        <view class="td1">{{bwTest}}</view>
+                        <view class="td1">{{bWSumAngleL}}</view>
+                        <view class="td1">{{bwSumAngleR}}</view>
+                        <view class="td1">{{bwDistance}}</view>
+                        <view class="tddate1">{{bwDate}}</view>
+                  </view>               
+                  <view class="block"></view>
+
+                   <!--平衡台-->
+                    <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">总偏移角度</view>
+                  <view class="th1 ">左臂偏角度</view>
+                  <view class="th1">右臂偏角度</view>
+                  <view class="th1">测试时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{pinghengtai}}</view>
+                        <view class="td1">{{baSumAngle}}</view>
+                        <view class="td1">{{baSumAngleL}}</view>
+                        <view class="td1">{{baSumAngleR}}</view>
+                        <view class="td1">{{baTest}}</view>
+                        <view class="tddate1">{{baDate}}</view>
+                  </view>             
+                  <view class="block"></view>
+
+                   <!--手脚协调-->
+                    <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">总分数</view>
+                  <view class="th1 ">第一关平均时</view>
+                  <view class="th1">第二关平均时</view>
+                  <view class="th1">第三关平均时</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{shouyanxietiao}}</view>
+                        <view class="td1">{{hfScore}}</view>
+                        <view class="td1">{{hfAverageTime1}}</view>
+                        <view class="td1">{{hfAverageTime2}}</view>
+                        <view class="td1">{{hfAverageTime3}}</view>
+                        <view class="tddate1">{{hfDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--老版脚步器7个表格数据向下-->
+                    <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">使用时长</view>
+                  <view class="th7 ">最短时长</view>
+                  <view class="th7">最长时长</view>
+                    <view class="th7">平均时长</view>
+                  <view class="th7">总踩踏次</view>
+                  <view class="thdate7 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td7">{{xinjiaobuqi}}</view>
+                        <view class="td7">{{dlTest}}</view>
+                        <view class="td7">{{dlShortTime}}</view>
+                        <view class="td7">{{dlLongTime}}</view>
+                        <view class="td7">{{dlAvgTime}}</view>
+                        <view class="td7">{{dlNum}}</view>
+                        <view class="tddate7">{{dlDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--折返跑-->
+                     <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">总长</view>
+                  <view class="th7 ">测试用时</view>
+                  <view class="th7">前段时长</view>
+                    <view class="th7">转身时长</view>
+                  <view class="th7">后段时长</view>
+                  <view class="thdate7 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td7">{{zhefangpao}}</view>
+                        <view class="td7">{{rbRunLong}}</view>
+                        <view class="td7">{{rbTotalTime}}</view>
+                        <view class="td7">{{rbTimeF}}</view>
+                        <view class="td7">{{rbZs}}</view>
+                        <view class="td7">{{rbTimeB}}</view>
+                        <view class="tddate7">{{rbDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--骑行-->
+                  <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">开始时间</view>
+                  <view class="th7 ">结束时间</view>
+                  <view class="th7">骑行次数</view>
+                    <view class="th7">总时长</view>
+                  <view class="th7">平均时长</view>
+                  <view class="thdate7 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td7">{{qixing}}</view>
+                        <view class="td7">{{startTime}}</view>
+                        <view class="td7">{{endTime}}</view>
+                        <view class="td7">{{number}}</view>
+                        <view class="td7">{{dateTime}}</view>
+                        <view class="td7">{{averageTime}}</view>
+                        <view class="tddate7">{{testTime}}</view>
+                  </view>
+                  <view class="block"></view>
+              </view>
+            <view class="da1">
+                    <text>测评思维能力结果</text>
+            </view>
+          <view class="table">
+                           <!--拼图   向下是4个格子数据-->
+                  <view class="tr">
+                  <view class="th2">测评项目</view>
+                  <view class="th2">分数</view>
+                  <view class="th2">测试时长</view>
+                  <view class="thdate2">测试日期</view>
+                  </view>
+                  <view class="tr">
+                  <view class="td2">{{pingtu}}</view>
+                  <view class="td2">{{pdScore}}</view>          
+                  <view class="td2">{{pdTime}}</view>
+                  <view class="tddate2">{{pdDate}}</view>
+                  </view>
+      
+                  <view class="block"></view>
+                   <!--拼板-->
+                  <view class="tr">
+                  <view class="th2">测评项目</view>
+                  <view class="th2">分数</view>
+                  <view class="th2">测试时长</view>
+                  <view class="thdate2">测试日期</view>
+                  </view>       
+                  <view class="tr">
+                  <view class="td2">{{pingban}}</view>
+                  <view class="td2">{{pdScore}}</view>          
+                  <view class="td2">{{pdTime}}</view>
+                  <view class="tddate2">{{pdDate}}</view>
+                  </view>            
+                  <view class="block"></view>
+
+                 <!--感知觉 向下是5个格子数据-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">正确总个数</view>
+                  <view class="th ">错误总个数</view>
+                  <view class="th">测试用时</view>
+                  <view class="thdate ">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td">{{ganzhijue}}</view>
+                        <view class="td">{{sfCountT}}</view>
+                        <view class="td">{{sfCountF}}</view>
+                        <view class="td">{{sfTime}}</view>
+                        <view class="tddate">{{sfDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                <!--棋类-->
+                    <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">收集的棋子</view>
+                  <view class="th ">连续跳次数</view>
+                  <view class="th">平均一步时间</view>
+                  <view class="thdate ">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td">{{qilei}}</view>
+                        <view class="td">{{jcCollectChess}}</view>
+                        <view class="td">{{jcContinuousNumber}}</view>
+                        <view class="td">{{jcAvgTime}}</view>
+                        <view class="tddate">{{jcDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--注意力-->
+                  <view class="tr">
+                  <view class="th">测评项目</view>
+                  <view class="th">项目名称</view>
+                  <view class="th ">正确个数</view>
+                  <view class="th">错误个数</view>
+                  <view class="thdate ">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td">{{zhuyili}}</view>
+                        <view class="td">{{testTypeName}}</view>
+                        <view class="td">{{rightCountAll}}</view>
+                        <view class="td">{{rightCountClick}}</view>
+                        <view class="tddate">{{drillDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                  <!--精细动作 向下是6个格子数据-->
+                  <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">难度</view>
+                  <view class="th1 ">完成情况</view>
+                  <view class="th1">个数</view>
+                  <view class="th1">总用时</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{jingxi}}</view>
+                        <view class="td1">{{fmLevel}}</view>
+                        <view class="td1">{{fmCompleteRate}}</view>
+                        <view class="td1">{{fmNumber}}</view>
+                        <view class="td1">{{fmTime}}</view>
+                        <view class="tddate1">{{fmDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                 <!--逻辑狗-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">名称</view>
+                  <view class="th1 ">正确率</view>
+                  <view class="th1">总时长</view>
+                  <view class="th1">修改次数</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{luojigou}}</view>
+                        <view class="td1">{{ldUpdateTopic}}</view>
+                        <view class="td1">{{ldCorrectProbability}}</view>
+                        <view class="td1">{{ldUpdateTime}}</view>
+                        <view class="td1">{{ldTime}}</view>
+                        <view class="tddate1">{{ldDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--数独-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>              
+                  <view class="th1 ">雏形时长</view>
+                  <view class="th1">调整时长</view>
+                  <view class="th1">调整次数</view>
+                     <view class="th1">测试时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{shudu}}</view>
+                        <view class="td1">{{skRudimentDate}}</view>
+                        <view class="td1">{{skUpdateDate}}</view>
+                        <view class="td1">{{skUpdateTime}}</view>
+                        <view class="td1">{{skTime}}</view>
+                        <view class="tddate1">{{skDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--迷宫-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">迷宫类型</view>  
+                  <view class="th1">完成率</view>
+                  <view class="th1">步数</view>
+                  <view class="th1 ">测试用时</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{migong}}</view>
+                        <view class="td1">{{mbMaze}}</view>
+                        <view class="td1">{{mbCompleteRate}}</view>
+                        <view class="td1">{{mbFootCount}}</view>
+                        <view class="td1">{{mbTime}}</view>
+                        <view class="tddate1">{{mbDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--记忆翻翻乐-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">难度</view>
+                  <view class="th1 ">正确率</view>
+                  <view class="th1">正确个数</view>
+                  <view class="th1">平均用时</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{jiyifanfnale}}</view>
+                        <view class="td1">{{mhLevel}}</view>
+                        <view class="td1">{{mhCorrectProbability}}</view>
+                        <view class="td1">{{mhCorrectNumber}}</view>
+                        <view class="td1">{{mhAvgTime}}</view>
+                        <view class="tddate1">{{mhDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--区角-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">正确数</view>
+                  <view class="th1 ">错误数</view>
+                  <view class="th1">测试时长</view>
+                  <view class="th1">平均时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{qujiao}}</view>
+                        <view class="td1">{{angleCounT}}</view>
+                        <view class="td1">{{angleCounF}}</view>
+                        <view class="td1">{{angleTime}}</view>
+                        <view class="td1">{{angleAvgTime}}</view>
+                        <view class="tddate1">{{angleDate}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--语文-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">拼对次数</view>
+                  <view class="th1 ">拼错次数</view>
+                  <view class="th1">总时长</view>
+                  <view class="th1">平均时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{chinese}}</view>
+                        <view class="td1">{{pairingnum}}</view>
+                        <view class="td1">{{misspellingnum}}</view>
+                        <view class="td1">{{totalduration}}</view>
+                        <view class="td1">{{averageduration}}</view>
+                        <view class="tddate1">{{chinesetime}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                   <!--数学-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">算对次数</view>
+                  <view class="th1 ">算错次数</view>
+                  <view class="th1">总时长</view>
+                  <view class="th1">平均时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{mathices}}</view>
+                        <view class="td1">{{thatsrightnum}}</view>
+                        <view class="td1">{{miscalculationnum}}</view>
+                        <view class="td1">{{totaldurationsa}}</view>
+                        <view class="td1">{{averagedurationa}}</view>
+                        <view class="tddate1">{{mathematicstime}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                    <!--英语-->
+                   <view class="tr">
+                  <view class="th1">测评项目</view>
+                  <view class="th1">字母拼对次数</view>
+                  <view class="th1 ">平均时长</view>
+                  <view class="th1">单词拼对次数</view>
+                  <view class="th1">拼单词总时长</view>
+                  <view class="thdate1 ">测试日期</view>
+                  </view>
+                  <view class="tr">
+                        <view class="td1">{{english}}</view>
+                        <view class="td1">{{singleletternum}}</view>
+                        <view class="td1">{{averagedurations}}</view>
+                        <view class="td1">{{wordnum}}</view>
+                        <view class="td1">{{wordtotaltime}}</view>
+                        <view class="tddate1">{{englishtime}}</view>
+                  </view>
+                  <view class="block"></view>
+
+                  <!--空间记忆  向下是7个格子数据-->
+                   <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">分数</view>
+                   <view class="th7">记忆广度</view>
+                  <view class="th7">正确次数</view>
+                  <view class="th7">错误次数</view>
+                  <view class="th7">总用时</view>
+                  <view class="thdate7">测试时间</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td7">{{kongjianjiyi}}</view>
+                        <view class="td7">{{cmScore}}</view>
+                        <view class="td7">{{cmMemoryBreadth}}</view>
+                        <view class="td7">{{cmCorrectCount}}</view>
+                        <view class="td7">{{cmErrorCount}}</view>
+                        <view class="td7">{{cmTime}}</view>
+                        <view class="tddate7">{{cmDate}}</view>
+                  </view>
+                  <view class="block"></view>    
+
+                  <!--数字记忆 -->
+                   <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">分数</view>
+                  <view class="th7 ">正确次数</view>
+                  <view class="th7">错误次数</view>
+                  <view class="th7">平均反应</view>
+                  <view class="th7">总用时</view>
+                  <view class="thdate7">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td7">{{shuzijiyi}}</view>
+                        <view class="td7">{{fbCorrectRate}}</view>
+                        <view class="td7">{{fbCorrectCount}}</view>
+                        <view class="td7">{{fbErrorCount}}</view>
+                        <view class="td7">{{dbAvgReacTime}}</view>
+                        <view class="td7">{{fbTime}}</view>
+                        <view class="tddate7">{{fbDate}}</view>
+                  </view>
+                  <view class="block"></view> 
+
+                   <!--听力记忆  -->
+                   <view class="tr">
+                  <view class="th7">测评项目</view>
+                  <view class="th7">分数</view>
+                   <view class="th7">记忆广度</view>
+                  <view class="th7">正确次数</view>
+                  <view class="th7">错误次数</view>
+                  <view class="th7">总用时</view>
+                  <view class="thdate7">测试日期</view>
+                  </view>
+                  <view class="tr" >
+                        <view class="td7">{{tinglijiyi}}</view>
+                        <view class="td7">{{tbScore}}</view>
+                        <view class="td7">{{tbMemoryBreadth}}</view>
+                        <view class="td7">{{tbCorrectCount}}</view>
+                        <view class="td7">{{tbErrorCount}}</view>
+                        <view class="td7">{{tbTime}}</view>
+                        <view class="tddate7">{{tbDate}}</view>
+                  </view>
+                  <view class="block"></view>             
+              </view>
+    </view>        
+</view>

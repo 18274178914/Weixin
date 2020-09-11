@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="da">
+      <view class="photo" style="margin-top:20rpx">
+         <view class="hoto"><image src="/static/img/hoto.png"></image></view><view class="photname">{{name}}</view>
+      </view>
+      <view class="divLine"></view>
+      <view class="xinxi">
+         <view class="img"><image src="/static/img/school.png"></image></view><view class="schoolname">{{schoolname}}</view>
+      </view>
+      <view class="xinxi" style="margin-top:20rpx">
+         <view class="img"><image src="/static/img/grade.png"></image></view><view class="schoolname">{{gradename}}</view>
+      </view>
+      <view class="xinxi" style="margin-top:20rpx">
+         <view class="img"><image src="/static/img/class.png"></image></view><view class="schoolname">{{classname}}</view>
+      </view>
+       <view class="xinxi" style="margin-top:20rpx">
+         <view class="img"><image src="/static/img/usex.png"></image></view><view class="schoolname">{{sex}}</view>
+      </view>
+       <view class="xinxi" style="margin-top:20rpx">
+         <view class="img"><image src="/static/img/ucode.png"></image></view><view class="schoolname">{{code}}</view>
+      </view>
+       <view class="xinxi" style="margin-top:20rpx">
+         <view class="img"><image src="/static/img/ubithday.png"></image></view><view class="schoolname">{{nianlin}}</view>
+      </view>
+     
+</view>
+</view>

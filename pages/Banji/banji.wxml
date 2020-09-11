@@ -1,0 +1,29 @@
+<view class='container'>
+      <text class="baogao">所有班级信息</text>
+      <view class="divLine"></view>
+
+<!--个人信息-->  
+<view>
+      <view class="xinxi">
+      <view class="grade">年级</view><view class="gradename">{{gradename}}</view>
+      </view>
+</view>
+ <view class="divLine1">班级</view>
+        <view class="table">
+                             <view class="tr" >                  
+                                <view class="th">班级ID</view>
+                                <view class="th">班级</view>
+                                <view style="border-right:1rpx solid #61ACD3;width:30%" class="th">操作</view>
+                                </view>
+                                <view wx:for="{{classstudent}}" wx:for-item="items" class="tr"  wx:key="{{items.class_id}}" >
+                                <view class="td">{{items.class_id}}</view>          
+                                <view class="td">{{items.class_name}}</view>
+                                <view class="td" style="border-right:1rpx solid #61ACD3;width:30%" >
+                                 <view class="caozuo" data-id="{{items._id}}" bindtap="chakanstudent">查看学生</view>
+
+                                </view>
+                            </view>
+        </view>                  
+
+
+</view>

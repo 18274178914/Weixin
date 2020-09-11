@@ -1,0 +1,126 @@
+<view class='da'>
+     <!--  <image class='zixunImg' src='/static/img/zhongyizixun.png'></image>-->
+        <view class="yundong">
+              <view class="tou">
+                  <view class="gim"><image src="../../static/img/yundong.png"></image></view>
+                  <view class="body"><h2>运动测评工具</h2></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易趴地推球测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易吊环测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易跳远测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易拍球测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易平衡台测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易十米折返跑测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易脚步器测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易坐位体前屈测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易蹦床测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易平衡木测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易手眼协调测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易赛车跑道测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby"><h3>中易滑滑板测评训练系统</h3></view>
+              </view>
+        </view>
+      
+       <view class="yundong" style="height:140rpx">
+             <view class="tou">
+                  <view class="gim"><image src="../../static/img/jinggxi.svg" style="width:60rpx;height:60rpx;margin-top: 10rpx;margin-left: 8rpx;"></image></view>
+                  <view class="body"><h2>精细动作测评</h2></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易精细动作测评训练系统</h3></view>
+              </view>
+       </view>
+
+        <view class="yundong" style="height:398rpx">
+             <view class="tou">
+                  <view class="gim"><image src="../../static/img/siweidaotu.png" style="width:60rpx;height:60rpx;margin-top: 10rpx;margin-left: 8rpx;"></image></view>
+                  <view class="body"><h2>思维能力测评</h2></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易逻辑狗测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易拼板测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易拼图测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易数独测评训练系统</h3></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易棋类测评训练系统</h3></view>
+              </view>         
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易迷宫测评训练系统</h3></view>
+              </view>
+       </view>
+
+        <view class="yundong" style="height:306rpx">
+             <view class="tou">
+                  <view class="gim"><image src="../../static/img/hexin.png"></image></view>
+                  <view class="body"><h2>核心能力测评</h2></view>
+              </view>
+              <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易注意力测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易感知觉测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易认知能力测评训练系统</h3></view>
+              </view>
+                <view class="wei">
+                  <view class="gmi"><image src="../../static/img/yuan.png"></image></view>
+                  <view class="doby" style="line-height:60rpx"><h3>中易学习能力测评训练系统</h3></view>
+              </view>
+       </view>
+</view>

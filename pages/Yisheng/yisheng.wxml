@@ -1,0 +1,34 @@
+<view class='container'>
+      <text class="baogao">所有学生信息</text>
+      <view class="divLine"></view>
+
+<!--个人信息-->  
+<view>
+      <view class="xinxi">
+       <view class="class">班级</view><view class="classname">{{classname}}</view>
+      </view>
+</view>
+ <view class="divLine1">学生信息</view>
+        <view class="table">
+                             <view class="tr" >
+                                <view wx:if="{{userxinxi}}" class="th">id</view>
+                                <view class="th">姓名</view>
+                                <view class="th">性别</view>
+                                <view class="th">年龄</view>
+                                <view style="border-right:1rpx solid #61ACD3;width:30%" class="th">操作</view>
+                                </view>
+                                <view wx:for="{{Schooluser}}" wx:for-item="items" class="tr"  wx:key="{{items.u_id}}">
+                                <view wx:if="{{userxinxi}}" class="td" id='uId'>{{items.u_id}}</view>
+                                <view class="td">{{items.u_name}}</view>
+                                <view class="td" >{{items.u_gender}}</view>          
+                                <view class="td">{{items.u_birthday}}</view>
+                                 <view class="td" style="border-right:1rpx solid #61ACD3;width:30%" >
+                                 <view class="caozuo" data-id="{{items.u_id}}" bindtap="siwei">思维</view>
+                                 <view class="caozuo1" data-id="{{items.u_id}}" bindtap="yundong">运动</view>
+                                 <view  class="caozuo2" data-id="{{items.u_id}}" bindtap="sousuo">搜索</view>
+                                  </view>
+                            </view>
+        </view>                  
+
+
+</view>

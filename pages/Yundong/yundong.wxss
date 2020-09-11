@@ -1,0 +1,322 @@
+/**头部**/
+.baogao{
+  text-align: center;
+  font-size: 30rpx;
+}
+/**分割线**/
+.divLine{
+  margin-top: 30rpx;
+  background: #00A29A;
+  width: 100%;
+  height: 13rpx;
+  margin-bottom: 30rpx;
+ }
+ /**学生信息**/
+ .xinxi{
+   font-size: 20rpx;
+   text-align: center;
+ }
+.school{
+float: left;
+height:31rpx;
+width: 68rpx;
+background-color: #8CCFCE;
+padding: 13rpx;
+margin-left: 18rpx;
+}
+.schoolname{
+  width: 255rpx;
+  height: 29rpx;
+  border: 1rpx solid #DAECF4;
+  float: left;
+  padding-bottom: 25rpx;
+  line-height: 48rpx;
+}
+ .gradename{
+  border: 1rpx solid #DAECF4;
+  float: left;
+  width: 255rpx;
+  height: 29rpx;
+  padding-bottom: 25rpx;
+  margin-right: 5rpx;
+  line-height: 48rpx;  
+ }
+ .class{
+  float: left;
+  height:31rpx;
+  width: 68rpx;
+  background-color: #8CCFCE;
+  padding: 13rpx;
+  margin-left: 18rpx;
+  margin-top: 30rpx;
+  }
+ .classname{
+  width: 255rpx;
+  height: 29rpx;
+  border: 1rpx solid #DAECF4;
+  float: left;
+  margin-top: 31rpx;
+  padding-bottom: 25rpx;
+  line-height: 48rpx;
+}
+ .uname{
+border: 1rpx solid #DAECF4;
+float: left;
+padding-bottom: 24rpx;
+width: 96rpx;
+height: 29rpx;
+margin-top: 30rpx;
+line-height: 48rpx;
+ }
+   .codename{
+    width:203rpx;
+    height: 29rpx;
+    border: 1rpx solid #DAECF4;
+    float: left;
+    margin-right: 8rpx;
+    margin-top: 31rpx;
+    padding-bottom: 25rpx;
+    line-height: 48rpx;    
+   }
+   /**测评结果**/
+.divLine1{
+  margin-top: 30rpx;
+background: #8CCFCE;
+width: 100%;
+height: 41rpx;
+margin-bottom: 30rpx;
+padding: 8rpx;
+padding-left: 16rpx;
+text-align: center;
+font-size: 30rpx
+ }
+ /**表格**/
+.table {
+  font-size: 19rpx;
+  text-align: center;
+}
+/**表格下面隔空**/
+.block{
+  margin-bottom: 30rpx;
+}
+
+/**五个格子样式**/
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.th {
+  width: 17%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  border-right: none;
+  height: 50rpx;
+}
+.thdate {
+  width: 26%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.td {
+  width: 17%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #61ACD3;
+  border-bottom: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.tddate{
+width: 26%;
+justify-content: center;
+display: flex;
+align-items: center;
+border: 1px solid #61ACD3;
+height: 50rpx;
+border-top: none;
+
+}
+
+
+/**六个格子样式**/
+.th1 {
+  width:16%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  border-right: none;
+  height: 50rpx;
+}
+.thdate1 {
+  width: 14%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.td1 {
+  width: 16%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #61ACD3;
+  border-bottom: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.tddate1{
+  width: 14%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+  border-top: none;
+  }
+
+  /**4个格子样式**/
+.th2 {
+  width: 22%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  border-right: none;
+  height: 50rpx;
+}
+.thdate2 {
+  width: 29%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.td2 {
+  width: 22%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #61ACD3;
+  border-bottom: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.tddate2{
+  width: 29%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+  border-top: none;
+  }
+
+   /**3个格子样式**/
+   .th3 {
+    width: 28%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #61ACD3;
+    border-right: none;
+    height: 50rpx;
+  }
+  .thdate3 {
+    width: 39%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #61ACD3;
+    height: 50rpx;
+  }
+  .td3 {
+    width: 28%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #61ACD3;
+    border-bottom: 1px solid #61ACD3;
+    height: 50rpx;
+  }
+  .tddate3{
+    width: 39%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #61ACD3;
+    height: 50rpx;
+    border-top: none;
+    }
+
+    /**7个格子样式**/
+.th7 {
+  width: 13%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  border-right: none;
+  height: 50rpx;
+}
+.thdate7 {
+  width: 15%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.td7 {
+  width: 13%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #61ACD3;
+  border-bottom: 1px solid #61ACD3;
+  height: 50rpx;
+}
+.tddate7{
+  width: 15%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #61ACD3;
+  height: 50rpx;
+  border-top: none;
+  }
+  .canvas {
+    width: 80px;
+    height: 80px;
+  }
+  /**测试医生
+  .yishen{
+    float: right;
+      }
+      .yishenname{
+        float: right;
+        color: #5A5555;
+        width: 209rpx;
+        margin-right:25rpx;
+        border-bottom: 2rpx solid #746F6E;
+        font-size: 33rpx;
+      }
+   
+     .ceshidate{
+       float: right;
+     }
+     .dateproject{
+      float: right;
+      color: #5A5555;
+      width: 209rpx;
+      margin-right:25rpx;
+      border-bottom: 2rpx solid #746F6E;
+      font-size: 33rpx;
+     }**/

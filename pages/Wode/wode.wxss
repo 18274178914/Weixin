@@ -1,0 +1,68 @@
+/**头部**/
+.da{
+  border-top:1rpx solid #DEE0E0;
+  text-align: center;
+  font-size: 30rpx;
+  padding-top: 7rpx;
+}
+.hoto{
+  float: left;
+width: 104rpx;
+height: 93rpx;
+margin-left: 70rpx;
+border-radius: 58rpx;
+background: white;
+padding-top: 7rpx;
+padding-bottom: 4rpx;
+box-shadow: 0px 2px 2px 2px #CBCFD0;
+}
+.photo{
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+}
+.hoto image{
+  float: left;
+  width: 89rpx;
+  height: 86rpx;
+  margin-left: 7rpx;
+  border: 1px solid white;
+  border-radius: 50rpx;
+}
+.photname{
+  float: left;
+  line-height: 114rpx;
+  margin-left: 27rpx;  
+}
+/**分割线**/
+.divLine{
+  margin-top: 30rpx;
+  background: #E6E8E8;
+  width: 100%;
+  height: 8rpx;
+  margin-bottom: 30rpx;
+ }
+/**学生信息**/
+.xinxi{
+  text-align: center;
+width: 100%;
+height: 90rpx;
+border-bottom: 1px solid #E6E8E8;
+margin-left: 42rpx;
+ 
+}
+
+.img{
+  float: left;
+  width: 60rpx ;
+  height: 60rpx;
+}
+image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.schoolname{
+  float: left;
+  line-height: 65rpx;
+  margin-left: 27rpx;  
+}

@@ -1,0 +1,327 @@
+.zixunImg{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index: -1;
+  }
+.swiper-tab{
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;}
+.swiper-tab-list{  font-size: 30rpx;
+  display: inline-block;
+  width: 20%;
+  color: #777777;
+}
+.on{
+  color: #606060;
+  border-bottom: 5rpx solid #61ACD3;
+  font-weight: bold;  
+}
+.swiper-box{ display: block; height: auto; width: 100%; overflow: hidden;margin-bottom: 130rpx;
+
+}
+.swiper-box view{
+  text-align: center;
+}
+/**标题**/
+.title{
+  width: 470rpx;
+  padding: 10px;
+  border-radius: 20rpx;
+  background: #D1E4F6;
+  margin-left: 118rpx;
+  margin-top: 44rpx;
+  font-size: 32rpx;
+}
+.title1{
+  width: 220rpx;
+padding: 10px;
+border-radius: 20rpx;
+background: #D1E4F6;
+margin-left: 236rpx;
+margin-top: 44rpx;
+font-size: 32rpx;
+float: left;
+margin-bottom: 40rpx;
+
+
+}
+.title2{
+  width: 220rpx;
+padding: 10px;
+border-radius: 20rpx;
+background: #CFD5EA;
+margin-bottom: 46rpx;
+margin-left: 118rpx;
+margin-top: 44rpx;
+font-size: 32rpx;
+float: left;
+display: none;
+}
+/**表格样式**/
+.table {
+  font-size: 19rpx;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #61ACD3;
+margin-left:36rpx;
+padding-bottom: 3rpx;
+float: left;
+}
+.tr{
+  width: 100%;
+  display: flex;/**盒子平行**/
+}
+.th {
+  width: 12%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-right: none;
+  height: 50rpx;
+  background: #4472C4;
+  color: white;
+}
+.thdate {
+  width: 26%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  height: 50rpx;
+  background: #4472C4;
+  color: white;
+}
+.td {
+  width: 12%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 50rpx;
+}
+.tddate{
+  width: 26%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  height: 50rpx;
+  border-top: none;
+  }
+  /**答题速度**/
+  .th3 {
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #61ACD3;
+    border-right: none;
+    height: 50rpx;
+    background: #4472C4;
+    color: white;
+  }
+  .td3 {
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 66rpx;
+  }
+  /**排行榜**/
+  .th5 {
+    width: 14.3%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 64rpx;
+    background: #4472C4;
+    color: white;
+  }
+  .td5 {
+    width: 14.3%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 60rpx;
+  }
+  /**柱形图**/
+  .pieCanvas{
+    width: 100%;
+    height: 210px;
+    margin-top: 122rpx;
+  }
+  .pieCanvas1{
+    margin-top:100rpx;
+    width: 100%;
+    height: 210px;
+  }
+.keshione{
+background: #169BD5;
+color: white;
+width: 330rpx;
+height: 89rpx;
+font-size: 30rpx;
+border-radius: 40rpx;
+margin: 58rpx auto;
+justify-content: space-between;
+line-height: 84rpx;
+
+  }
+ 
+.chuti{
+width: 51px;
+height: 30px;
+background: #CFD5EA;
+border: none;
+border-radius: 10rpx;
+font-size: 32rpx;
+line-height: 59rpx;
+position: absolute;
+left: 84%;
+top: 57rpx;
+
+}
+.table1{
+  position: absolute;
+left: 24rpx;
+top: 108rpx;
+font-size: 19rpx;
+text-align: center;
+width: 94%;
+margin-bottom: 30rpx;
+padding-bottom: 3rpx;
+z-index: 1;
+background: white;
+height: 1276rpx;
+
+  
+}
+.thti {
+  width: 12%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-right: none;
+  height: 50rpx;
+  background: #4472C4;
+  color: white;
+}
+.tdti {
+  width: 12%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 96rpx;  
+}
+.keshisudet{
+float: left;
+margin-left: 47rpx;
+margin-top: 26rpx;
+background: #61ACD3;
+color: white;
+width: 133rpx;
+height: 48rpx;
+border-radius: 19rpx;
+line-height: 48rpx;
+
+}
+.keshida{
+font-size: 22rpx;
+margin-top: 30rpx;
+height: 186rpx;
+}
+.table2{
+  position: absolute;
+left: 24rpx;
+top: 108rpx;
+font-size: 19rpx;
+text-align: center;
+width: 94%;
+margin-bottom: 30rpx;
+padding-bottom: 3rpx;
+z-index: 1;
+background: white;
+height: 1276rpx;
+
+}
+.guanbigeren{
+  margin-top: 40rpx;
+  width: 400rpx;
+  height: 70rpx;
+  margin-bottom: 40rpx;
+  margin-left: 128rpx;
+  line-height: 65rpx;
+  background: #61ACD3;
+  border-radius: 20rpx;
+  color: white;
+  font-size: 28rpx;
+  position: absolute;
+  font-weight: bold;
+  border: 6rpx solid white;
+  
+}
+.tihaopaihangguanbi{
+  margin-top: 40rpx;
+  width: 400rpx;
+  height: 70rpx;
+  margin-bottom: 40rpx;
+  margin-left: 144rpx;
+  line-height: 65rpx;
+  background: #61ACD3;
+  border-radius: 20rpx;
+  color: white;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: 4rpx solid white;
+}
+.chutiguanbi{
+  margin-top: 40rpx;
+width: 400rpx;
+height: 62rpx;
+margin-bottom: 40rpx;
+margin-left: 128rpx;
+line-height: 56rpx;
+background: #61ACD3;
+border-radius: 12rpx;
+color: white;
+font-size: 28rpx;
+font-weight: bold;
+}
+.tabletocnum{
+  position: absolute;
+  left: 24rpx;
+  top: 131rpx;
+  font-size: 19rpx;
+  text-align: center;
+  width: 94%;
+  margin-bottom: 30rpx;
+  padding-bottom: 3rpx;
+  background: #C7D0F1;
+}
+
+.th2 {
+  width: 16.3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 64rpx;
+  background: #4472C4;
+  color: white;
+}
+.td2 {
+  width: 16.3%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+}

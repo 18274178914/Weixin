@@ -1,0 +1,219 @@
+
+<view class="container">
+        <view class="swiper-tab">
+            <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">本课成绩</view>
+            <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">课时成绩</view>
+            <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">答题速度</view>
+            <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">本课统计</view>
+            <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">排行榜</view>
+        </view>
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight+100}}px" bindchange="bindChange">
+        <swiper-item>
+        <view class="benkeda">
+                    <view class="title">本课成绩</view>
+                        <view class="title1" bindtap="xuanzewode">出题</view>
+
+         <view class="table" id="test">
+                  <view class="tr">
+                              <view class="th">姓名</view>
+                              <view class="th">性别</view>
+                              <view class="th">对或错</view>
+                              <view class="th">回答内容</view>
+                              <view class="th">题号</view>
+                              <view class="th">答题速度</view>
+                              <view class="thdate">测试时间</view>
+                   </view>     
+              <view class="tr"  wx:for="{{Jiaoxue}}" wx:for-item="items" style="background:{{items.true_or_false=='错' ? '#FE8086' : '#9FFECC'}}" wx:key="{{items.topic_number}}" > 
+                                        <view class="td" data-id="{{items.u_id}}" bindtap="yonghuId">{{items.u_name}}</view>
+                                        <view class="td">{{items.u_gender}}</view>
+                                        <view class="td"  bindtap="duicuotu">{{items.true_or_false}} </view>                                                 
+                                        <view class="td">{{items.answer}}</view>
+                                        <view class="td" 
+                                         style="background:{{items.topic_number=='1' ? '#B8D7F4':''||items.topic_number=='2' ? '#84CFF6':''||items.topic_number=='3' ? '#D1E4F6':''||items.topic_number=='4' ? '#9AF2EC':''||items.topic_number=='5' ? '#CEC6FC':''||items.topic_number=='6' ? '#58A9F6':''||items.topic_number=='7' ? '#E9A3E3':''||items.topic_number=='8' ? '#F5A4DD':''||items.topic_number=='9' ? '#FB2851':''||items.topic_number=='10' ? '#DEF97F':''||items.topic_number=='11' ? '#F9D97F':''||items.topic_number=='12' ? '#F9BA7F':''||items.topic_number=='13' ? '#D0BB7B':''||items.topic_number=='14' ? '#DC9C81':''}}">{{items.topic_number}}</view>
+                                        <view class="td" data-id="{{items.topic_number}}" bindtap="tihao">{{items.date_time}}</view>
+                                        <view class="tddate" bindtap="duicuo">{{items.date}}</view>
+                        </view>
+                      
+                  </view>
+                  </view>
+        </swiper-item>
+
+
+        <swiper-item>
+            <view class="keshida">
+                <view class="keshizhong">
+                    <view class="keshisudet" bindtap="diyikeshi">8:30-9:00</view><view class="keshisudet"  bindtap="dierkeshi">09:00-09:30</view> 
+                    <view class="keshisudet"  bindtap="disankeshi">09:30-10:00</view><view class="keshisudet"  bindtap="disikeshi">10:00-10:30</view>
+                </view>
+                <view class="keshizhong1">
+                    <view class="keshisudet"  bindtap="diwukeshi">10:30-11:00</view><view class="keshisudet"  bindtap="diliukeshi">14:00-14:30</view> 
+                    <view class="keshisudet"  bindtap="diqikeshi">14:30-15:00</view><view class="keshisudet" bindtap="dibakeshi">15:00-15:30</view>
+                </view>
+            </view>
+             <view class="table" id="test1">
+                  <view class="tr">
+                              <view class="th">姓名</view>
+                              <view class="th">性别</view>
+                              <view class="th">对或错</view>
+                              <view class="th">回答内容</view>
+                              <view class="th">题号</view>
+                              <view class="th">测试时长</view>
+                              <view class="thdate">测试时间</view>
+                   </view>     
+              <view class="tr"  wx:for="{{diyikeshi}}" wx:for-item="items" style="background:{{items.true_or_false=='错' ? '#FE8086' : '#9FFECC'}}" wx:key="{{items.topic_number}}" > 
+                                        <view class="td">{{items.u_name}}</view>
+                                        <view class="td">{{items.u_gender}}</view>
+                                        <view class="td">{{items.true_or_false}} </view>                                                 
+                                        <view class="td">{{items.answer}}</view>
+                                        <view class="td"
+                                        style="background:{{items.topic_number=='1' ? '#B8D7F4':''||items.topic_number=='2' ? '#84CFF6':''||items.topic_number=='3' ? '#D1E4F6':''||items.topic_number=='4' ? '#9AF2EC':''||items.topic_number=='5' ? '#CEC6FC':''||items.topic_number=='6' ? '#58A9F6':''||items.topic_number=='7' ? '#E9A3E3':''||items.topic_number=='8' ? '#F5A4DD':''||items.topic_number=='9' ? '#FB2851':''||items.topic_number=='10' ? '#DEF97F':''||items.topic_number=='11' ? '#F9D97F':''||items.topic_number=='12' ? '#F9BA7F':''||items.topic_number=='13' ? '#D0BB7B':''||items.topic_number=='14' ? '#DC9C81':''}}">{{items.topic_number}}</view>
+                                        <view class="td">{{items.date_time}}</view>
+                                        <view class="tddate">{{items.date}}</view>
+                        </view>
+                      
+                  </view>
+       
+       
+        </swiper-item>
+
+        <swiper-item>
+             <view class="title" style="margin-bottom:40rpx"><h2><text style="margin-right:40rpx;"></text>答题速度</h2></view>
+                  <view class="table" id='sudu' style="border:none">
+                             <view class="tr">
+                                        <view class="th3" style="border:none">排行</view>
+                                        <view class="th3" style="border:none">姓名</view>
+                                        <view class="th3" style="border:none">题号</view>
+                                        <view class="th3" style="border:none">答案</view>
+                                        <view class="th3" style="border:none">用时</view>                     
+                             </view>     
+                              <view class="tr"  wx:for="{{Sudu}}" wx:for-item="items"  wx:for-index="index" style="background:{{index%2==0?'#CFD5EB':'#E9EBF5'}}" > 
+                                    <view class="td3"> {{items.paihang}}</view>
+                                    <view class="td3">{{items.uName}}</view>
+                                     <view class="td3" data-id="{{items.topicNumber}}" bindtap="tucnumpberId">{{items.topicNumber}}</view>
+                                    <view class="td3">{{items.trueOrFalse}}</view>                                                 
+                                    <view class="td3">{{items.dateTime}}(S)</view>                                
+                              </view>
+                 
+                  </view>
+               
+        </swiper-item>
+        
+        <swiper-item>
+           
+            <view class="title"><h2>本课每题对错统计</h2></view>
+        <canvas canvas-id="columnCanvas" disable-scroll="true" class="pieCanvas" ></canvas>
+      
+
+        </swiper-item>
+        
+        <swiper-item>
+            <view class="title" style="margin-bottom:40rpx" wx:if="{{datipaihangtitie}}"><h2>答题排行榜</h2></view>
+                  <view class="table" wx:if="{{datipaihanghezi}}" id='paihang'  style="border:none">
+                              <view class="tr">
+                                          <view class="th5">排行</view>
+                                          <view class="th5">姓名</view>
+                                          <view class="th5">总题</view>
+                                          <view class="th5">正确</view>
+                                          <view class="th5">错误</view>
+                                          <view class="th5">分数</view>
+                                          <view class="th5">正确率</view>                     
+                              </view>     
+
+                              <view class="tr"  wx:for="{{zongpaihan}}" wx:for-item="items" wx:for-index="index" style="background:{{index%2==0?'#CFD5EB':'#E9EBF5'}}"> 
+                                    <view class="td5">{{items.paihang}}</view>
+                                    <view class="td5" data-id="{{items.uId}}" bindtap="shuxingtu">{{items.uName}}</view>
+                                    <view class="td5">{{items.zongti}}</view>  
+                                    <view class="td5">{{items.trueCount}} </view>                                                 
+                                    <view class="td5">{{items.falseCount}}</view>  
+                                     <view class="td5">{{items.trueCount}} </view> 
+                                    <view class="td5">{{items.zhengquelv}}%</view>                                
+                              </view>
+                  </view>
+                  <view wx:if="{{shuxingtuhezi}}">
+                     <view><h2>{{tongjiname}}</h2></view>
+                      <canvas canvas-id="columnCanvas1" disable-scroll="true" class="pieCanvas1" ></canvas>
+                          <view bindtap="shuxingtuhuangbi" class="guanbigeren">关闭</view>  
+                      </view>
+        </swiper-item>
+    </swiper>
+
+    <!-- 出题-->
+      <view class="table1" wx:if="{{chutihezi}}">
+               <view class="title" style="margin-left:100rpx;margin-bottom:40rpx;">出题</view>
+                  <view class="tr">                                            
+                              <view class="thti">题号</view>
+                              <view class="thti" style="width:28%">题目</view>
+                              <view class="thti" style="width:48%">选项</view>
+                              <view class="thti">出题</view>
+                    </view>     
+                    <view class="tr" wx:for="{{tinum}}" wx:for-item="items"  style="background:{{index%2==0?'#CFD5EB':'#E9EBF5'}}"> 
+                                        <view class="tdti">{{items.topicNumber}}</view>
+                                        <view class="tdti" style="width:28%">{{items.topic}}</view>      
+                                        <view class="tdti" style="width:48%">{{items.answer}}</view>                                                 
+                                        <view class="tdti" data-id="{{items.id}}" bindtap="chuti">出题</view>                                                     
+                     </view>    
+                         <view bindtap="chutiguanbi" class="chutiguanbi">关闭</view>      
+    </view>
+ <!-- 已出题-->
+    <view class="table1" wx:if="{{yichutihezi}}">
+               <view class="title" style="margin-left:100rpx;margin-bottom:40rpx;">已出题</view>
+                    <view class="tr">                                            
+                              <view class="thti" style="width:20%">题号</view>
+                              <view class="thti" style="width:40%">题目</view>
+                              <view class="thti" style="width:40%">选项</view>
+                    </view>     
+                    <view class="tr"  style="background:#CFD5EB"> 
+                                        <view class="tdti" style="width:20%">{{yichuti.topicNumber}}</view>
+                                        <view class="tdti" style="width:40%">{{yichuti.topic}}</view>      
+                                        <view class="tdti" style="width:40%">{{yichuti.answer}}</view>                                                 
+                     </view>    
+                         <view bindtap="yichutiguanbi" class="guanbigeren">关闭</view>      
+    </view>
+
+    <!-- 学生成绩-->
+             <view class="table2" wx:if="{{gerenhezi}}">
+              <image class='zixunImg' src='/static/img/gerenchengji.png'></image>
+                   <view class="title" style="margin-left: 64rpx;margin-bottom: 40rpx;margin-top: 224rpx;border: 6rpx solid white;background: #F4E57D;">个人成绩</view>
+                                <view class="tr" style="margin-left: 60rpx;width:558rpx;">
+                                            <view class="th2">姓名</view>
+                                            <view class="th2">性别</view>
+                                            <view class="th2">答对</view>
+                                            <view class="th2">回答内容</view>
+                                            <view class="th2">题号</view>
+                                            <view class="th2">速度</view>     
+                                                                
+                                </view>     
+                                <view class="tr"  wx:for="{{gerenchengji}}" wx:for-item="items" style="margin-left: 60rpx;width: 546rpx;background:{{items.true_or_false=='错' ? '#FFCCD6' : '#B0F9B0'}}">
+                                                            <view class="td2">{{items.u_name}}</view>
+                                                            <view class="td2">{{items.u_gender}}</view>
+                                                             <view class="td2">{{items.true_or_false}} </view>                                                 
+                                                            <view class="td2">{{items.answer}}</view>
+                                                            <view class="td2" >{{items.topic_number}}</view>
+                                                            <view class="td2">{{items.date_time}}</view>                                                    
+                                 </view>
+                       <view bindtap="guanbigeren" class="guanbigeren">关闭</view>
+            </view>
+
+
+     <view class="tabletocnum" wx:if="{{gerensuduhezi}}" > 
+                   <view class="title" style="margin-left:96rpx;margin-bottom:40rpx;border:4rpx solid white;background: #F4E57D;">题号排行</view>
+                            <view class="tr">
+                                        <view class="th3" style="border:none">排行</view>
+                                        <view class="th3" style="border:none">姓名</view>
+                                        <view class="th3" style="border:none">题号</view>
+                                        <view class="th3" style="border:none">答案</view>
+                                        <view class="th3" style="border:none">用时</view>                     
+                             </view>     
+                              <view class="tr"  wx:for="{{gerensudu}}" wx:for-item="items"  wx:for-index="index" style="background:{{index%2==0?'#CFD5EB':'#E9EBF5'}}" > 
+                                    <view class="td3"> {{items.paihang}}</view>
+                                    <view class="td3">{{items.uName}}</view>
+                                     <view class="td3" data-id="{{items.topicNumber}}" bindtap="tucnumpberId">{{items.topicNumber}}</view>
+                                    <view class="td3">{{items.trueOrFalse}}</view>                                                 
+                                    <view class="td3">{{items.dateTime}}(S)</view>                                
+                              </view>
+                      <view bindtap="guanbigerensudu" class="tihaopaihangguanbi">关闭</view>
+      </view>
+      
+           
+</view>

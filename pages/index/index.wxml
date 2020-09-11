@@ -1,0 +1,79 @@
+<view class="container">
+  <!-- 轮播-->
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='2000' duration='1000' circular='true'>
+        <block wx:for="{{bnrUrl}}" wx:for-index="index">
+        <swiper-item>
+          <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+  </swiper>
+<!-- 菜单 -->
+ <view class='btnview'>
+   <button class='btn1' bindtap='goTochinese'>
+      <image class='btnImg' src='/static/img/jiaoshi.png'></image>
+    <view>教师渠道</view>
+    </button>
+     <button class='btn1' bindtap='goToSelect'>
+      <image class='btnImg' src='/static/img/gerenxinxi.png'></image>
+    <view>个人信息查询</view>
+    </button>
+    <button class='btn1'  bindtap='goTocepin'>
+      <image class='btnImg' src='/static/img/zonghe.png'></image>
+    <view>测评工具</view>
+    </button> 
+     <button class='btn1' id='btn11' bindtap='goToyundon'>
+      <image class='btnImg' src='/static/img/yundong.png'></image>
+    <view>运动能力查询</view>
+    </button>
+    <button class='btn1' id='btn11' bindtap='goTosiwei'>
+      <image class='btnImg' src='/static/img/siweidaotu.png'></image>
+        <view>思维能力查询</view>
+    </button> 
+     <button class='btn1' id='btn11' bindtap='goTojiaoxue'>
+      <image class='btnImg' src='/static/img/jiaoxue.png'></image>
+        <view>远程教学</view>
+    </button> 
+  </view>  
+
+<!-- 电话 地址 -->
+  <view class="phone">
+       <image class='phoneimg' src='/static/img/dianhua.png'></image>
+       <text class='phontext'>联系电话：021-65751000</text>
+  </view>
+   <view class="address">
+       <image class='phoneimg' src='/static/img/dizhi.png'></image>
+        <text class='phontext'>上海市杨浦区国霞路258号202室</text>
+  </view>
+  
+<view class="login" wx:if="{{schoolName}}">
+   <view class="schoolcode">中易小程序-登录</view><view class="guanbi" bindtap="gunabilogin"><image src="/static/img/guanbi.png"></image></view>
+   <input class="weui-input" type="text" maxlength="10" placeholder-class="placeholder-input" placeholder="请输入10位学生卡号或8位教师账号" bindinput="u_code" />
+   <view class="loginclass" bindtap="login">登录</view>
+</view>
+
+<view class="login1" wx:if="{{jxName}}">
+     <view class="schoolcode1">远程教学登录</view><view class="guanbi1" bindtap="gunabilogin1"><image src="/static/img/guanbi.png"></image></view>
+      <input class="weui-input" type="text" maxlength="10" placeholder-class="placeholder-input" placeholder="请输入10位学生卡号或9位教师账号" bindinput="u_code1" />
+      <view class="login1class" bindtap="login1">登录</view>
+</view>
+
+<!-- 固定栏-->
+<view class='gudin'>
+    <button class="gudin1" bindtap='xuanzhongzhuye'>
+      <image class='gudinimg' src='/static/img/zhuye.png'></image>
+    <view>主页</view>
+    </button>   
+     <button class="gudin1"  bindtap="xuanzezixun" id='gudin11'>
+      <image class='gudinimg' src='/static/img/zixun.png'></image>
+    <view>资讯</view>
+    </button>
+   <button open-type="contact" class='gudin1' id='gudin11' >
+      <image class='gudinimg' src='/static/img/zhuanjia.png'></image>
+       <view>咨询</view>
+    </button> 
+    <button class="gudin1"  bindtap="xuanzewode" id='gudin11' >
+      <image class='gudinimg' src='/static/img/wode.png'></image>
+    <view>我的</view>
+    </button> 
+</view>  
+</view>

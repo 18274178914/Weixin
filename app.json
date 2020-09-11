@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Yisheng/yisheng",
+    "pages/Select/select",
+    "pages/Cepin/cepin",
+    "pages/Yundong/yundong",
+    "pages/Siwei/siwei",
+    "pages/Realtimeinfo/realtimeinfo",
+    "pages/Wode/wode",
+    "pages/School/school",
+    "pages/Banji/banji",
+    "pages/Jiaoxue/jiaoxue",
+    "pages/Yuanchenjia/yuanchenjia"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中易儿童发展评估中心",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

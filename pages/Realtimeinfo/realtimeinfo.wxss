@@ -1,0 +1,49 @@
+.zixunImg{
+width: 100%;
+height: 100%;
+position:absolute;
+left:0px;
+top:0px;
+z-index: -1;
+}
+h2{
+  color: #047ABB;
+font-size: 43rpx;
+font-weight: bold;
+margin: 115rpx 0rpx 150rpx 54rpx;
+}
+br{
+  font-size: 24rpx;
+font-weight: bold;
+}
+.diyi{
+  width: 597rpx;
+  height: 40rpx;
+  position: relative;
+  left: 206rpx;
+  top: 84rpx;
+  
+}
+.diyi image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.diyiImg{
+  margin-right: 8rpx;
+  float: left;
+}
+.diyitext{
+  float: left;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 36rpx;
+}
+
+h3{
+  color: #047ABB;
+  font-size: 43rpx;
+  font-weight: bold;
+  margin-top: 59rpx;
+  margin-left: 350rpx;
+  
+}

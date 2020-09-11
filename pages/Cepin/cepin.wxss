@@ -1,0 +1,71 @@
+.da{
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.zixunImg{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index: -1;
+  }
+.yundong{
+margin-bottom: 40rpx;
+width: 100%;
+height: 768rpx;
+
+}
+.tou{
+float: left;
+height: 80rpx;
+width: 100%;
+}
+.gim{
+  float: left;
+  width: 100rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+}
+.gim image{
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+}
+.body{
+  float: left;
+  line-height: 77rpx;
+  width: 603rpx;
+  height: 80rpx;
+}
+h2{
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.wei{
+  float: left;
+  height: 53rpx;
+  width: 100%;
+  }
+  .gmi{
+    float: left;
+    width: 86rpx;
+    height: 80rpx;
+    margin-left: 58rpx;
+    margin-top: 20rpx;    
+  }
+  .gmi image{
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+  }
+  .doby{
+    float: left;
+    line-height: 77rpx;
+    width: 584rpx;
+    height: 80rpx;
+    font-size: 30rpx;    
+  }
